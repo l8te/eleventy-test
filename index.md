@@ -21,6 +21,7 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - link back to blog index from post
 - prev/next links on post
 - defined post layout in json (parent directory data file)
+- pagination for blog list
 
 ## to do
 
@@ -30,5 +31,4 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - separate directory/collection for work
 
 ## issues
-- pagination collection size does not seem to work
 - need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining
