@@ -7,16 +7,12 @@
 
   {% if date %}<p class="time"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></p>{% endif %}
 
-  <ul>
-{%- for post in collections.post -%}
-  <li{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</li>
-{%- endfor -%}
-</ul>
-
-
   <!-- <p class="words">{{ content | wordcount }} words</p> -->
 
   {{ content | safe }}
+
+  <!-- for tag in tagslist -->
+  {{ tags }}
 
   {% set nextPost = collections.post | getNextCollectionItem(page) %}
   {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}

@@ -1,8 +1,8 @@
 ---
-title: blog index
+title: thoughts
 layout: base.njk
 eleventyNavigation:
-    key: blog
+    key: thoughts
     order: 5
 pagination:
     data: collections.post
@@ -10,6 +10,6 @@ pagination:
     reverse: true
     size: 3
 ---
-# all the blogs
+# thoughts, or: you could have just called it a blog
 
 Knife chrome bomb motion long-chain hydrocarbons grenade marketing vinyl. Faded sign network spook numinous math-futurity disposable boat smart-computer rain table pre-beef noodles RAF euro-pop. Sunglasses vehicle sensory augmented reality grenade youtube motion tube sub-orbital. 

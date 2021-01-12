@@ -29,6 +29,8 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - tags show on post
 - tags show under excerpt on blog index
 - separate directory/collection for work
+- images/image handling
 
 ## issues
+- started adding tags, need to fix collections
 - need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining
