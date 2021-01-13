@@ -1,6 +1,6 @@
 ---
 title: thoughts
-layout: base.njk
+layout: base
 eleventyNavigation:
     key: thoughts
     order: 5

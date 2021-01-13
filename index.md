@@ -1,13 +1,12 @@
 ---
-layout: base.njk
+title: home
+layout: base
 eleventyNavigation:
   key: home
   order: 1
 ---
 
-# home
-
-[grid of paintings from 2020?]
+## home
 
 Chiba augmented reality systema concrete monofilament neon chrome tank-traps wristwatch sentient-space franchise math-nano-ablative. Apophenia crypto-fluidity sign rebar office tank-traps girl soul-delay chrome media RAF disposable. 
 
@@ -24,13 +23,14 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - pagination for blog list
 - individual tag pages 
 - tags show on post
+- tags show under excerpt on blog index
+- all tag index works
 
 ## to do
-- tags show under excerpt on blog index
+
 - separate directory/collection for work
 - images/image handling
+- 404 page
 
 ## issues
-- extra bullet point at top of 
-- all tag index not working
 - need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining

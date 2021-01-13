@@ -18,11 +18,11 @@
   <h3>Tags:</h3>
     <ul>
         {% for tag in tags %}
-        <li>
-            {% if tag == "nav" %}
+            {% if tag == "all" %}
+            {% elif tag == "nav" %}
             {% elif tag == "post" %}
-            {% elif tag == "all" %}
             {% else %}
+            <li>
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <a href="{{ tagUrl | url }}">{{ tag }}</a>
             {% endif %}

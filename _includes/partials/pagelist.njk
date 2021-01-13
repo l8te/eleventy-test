@@ -15,6 +15,20 @@
     <a href="{{ post.url | url }}"
    aria-label="Read more on {{ post.data.title }}">Read more</a>
 
+   <ul>
+    {% for tag in post.data.tags %}
+    {% if tag == "all" %}
+    {% elif tag == "nav" %}
+    {% elif tag == "post" %}
+    {% else %}
+    <li>
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+
   </article>
   {%- endfor -%}
 

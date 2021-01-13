@@ -15,3 +15,11 @@
 </main>
 
 {% include "partials/htmlfoot.njk" %}
+
+<hr>
+<p>show all pages for debug</p>
+<ul>
+{%- for post in collections.all -%}
+  <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+{%- endfor -%}
+</ul>
