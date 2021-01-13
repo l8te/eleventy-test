@@ -12,6 +12,7 @@
   {% include "partials/pagelist.njk" %}
 
 {% endblock %}
+
 </main>
 
 {% include "partials/htmlfoot.njk" %}
@@ -23,3 +24,7 @@
   <li><a href="{{ post.url }}">{{ post.url }}</a></li>
 {%- endfor -%}
 </ul>
+
+<hr>
+<p>test if images work</p>
+{% image "./work/couldYouNot.jpg", "photo of my cat" %}

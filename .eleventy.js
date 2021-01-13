@@ -1,8 +1,30 @@
 const moment = require('moment');
  
 moment.locale('en');
- 
+
+// image handling
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes) {
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ["avif", "jpeg"]
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = function (eleventyConfig) {
+  // Copy `img/` to `_site/img`
+  eleventyConfig.addPassthroughCopy("img");
   
   // navigation
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
@@ -16,6 +38,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateReadable', date => {
   return moment(date).utc().format('LL'); // E.g. May 31, 2019
   })
+
+  // register image shortcode
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // register excerpt shortcode
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));

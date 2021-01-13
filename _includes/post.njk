@@ -7,13 +7,10 @@
 
   {% if date %}<p class="time"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></p>{% endif %}
 
-  <!-- <p class="words">{{ content | wordcount }} words</p> -->
+  <p>shows that we can get the file name from the frontmatter: {{ image }}</p>
+  <!-- {% image "./work/couldYouNot.jpg", "photo of my cat" %} -->
 
   {{ content | safe }}
-
-  <!-- for tag in tagslist -->
-
-  {{ tags }}
 
   <h3>Tags:</h3>
     <ul>

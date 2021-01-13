@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.7.4"
+  },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",
     "moment": "^2.29.1"

@@ -11,10 +11,6 @@ eleventyNavigation:
 Chiba augmented reality systema concrete monofilament neon chrome tank-traps wristwatch sentient-space franchise math-nano-ablative. Apophenia crypto-fluidity sign rebar office tank-traps girl soul-delay chrome media RAF disposable. 
 
 ## done
-
-- created dummy pages for index, about
-- created blog page with post index
-- created dummy blog posts
 - added moment.js dates
 - added excerpt shortcodes
 - link back to blog index from post
@@ -25,11 +21,12 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - tags show on post
 - tags show under excerpt on blog index
 - all tag index works
+- images with eleventy-img
 
 ## to do
 
-- separate directory/collection for work
-- images/image handling
+- separate directory/collection for work (paglist by collection?)
+- images from filename in frontmatter
 - 404 page
 
 ## issues
