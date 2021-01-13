@@ -21,14 +21,16 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - link back to blog index from post
 - prev/next links on post
 - defined post layout in json (parent directory data file)
+- pagination for blog list
+- individual tag pages 
+- tags show on post
 
 ## to do
-
-- tags index
-- tags show on post
 - tags show under excerpt on blog index
 - separate directory/collection for work
+- images/image handling
 
 ## issues
-- pagination collection size does not seem to work
+- extra bullet point at top of 
+- all tag index not working
 - need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining

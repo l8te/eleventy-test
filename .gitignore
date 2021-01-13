@@ -39,3 +39,4 @@ Thumbs.db
 # things *i* want to ignore #
 #############################
 node_modules/
+_site/

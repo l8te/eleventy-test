@@ -47,4 +47,16 @@ function extractExcerpt(article) {
   });
  
   return excerpt;
+
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter("head", (array, n) => {
+      if (n < 0) {
+          return array.slice(n);
+      }
+
+      return array.slice(0, n);
+  });
+
+  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+
 }
