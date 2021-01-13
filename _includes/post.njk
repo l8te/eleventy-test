@@ -2,7 +2,7 @@
 {% block content %}
   <p> > post layout working</p>
 
-  <a href="/blog">back to blog</a>
+  <a href="/thoughts">back to thoughts</a>
   <h1>{{ title }}</h1>
 
   {% if date %}<p class="time"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></p>{% endif %}
@@ -12,7 +12,23 @@
   {{ content | safe }}
 
   <!-- for tag in tagslist -->
+
   {{ tags }}
+
+  <h3>Tags:</h3>
+    <ul>
+        {% for tag in tags %}
+        <li>
+            {% if tag == "nav" %}
+            {% elif tag == "post" %}
+            {% elif tag == "all" %}
+            {% else %}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}">{{ tag }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
 
   {% set nextPost = collections.post | getNextCollectionItem(page) %}
   {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
