@@ -3,24 +3,7 @@ const moment = require('moment');
 moment.locale('en');
 
 // image handling
-const Image = require("@11ty/eleventy-img");
-
-async function imageShortcode(src, alt, sizes) {
-  let metadata = await Image(src, {
-    widths: [300, 600],
-    formats: ["avif", "jpeg"]
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
-}
+const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
 module.exports = function (eleventyConfig) {
   // Copy `img/` to `_site/img`
@@ -38,9 +21,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateReadable', date => {
   return moment(date).utc().format('LL'); // E.g. May 31, 2019
   })
-
-  // register image shortcode
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // register excerpt shortcode
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
@@ -83,7 +63,25 @@ module.exports = function (eleventyConfig) {
     return [...tagSet];
   });
 
-}
+  eleventyConfig.addPlugin(pluginLocalRespimg, {
+    folders: {
+      source: '.', // Folder images are stored in
+      output: '_site/img', // Folder images should be output to
+    },
+    images: {
+      resize: {
+        min: 250, // Minimum width to resize an image to
+        max: 1500, // Maximum width to resize an image to
+        step: 150, // Width difference between each resized image
+      },
+      hoistClasses: false, // Adds the image tag's classes to the output picture tag
+      gifToVideo: false, // Convert GIFs to MP4 videos
+      sizes: '100vw', // Default image `sizes` attribute
+      lazy: true, // Include `loading="lazy"` attribute for images
+    },
+  });
+
+};
 // END module.exports
 
 // handle excerpts
@@ -113,5 +111,5 @@ module.exports = function (eleventyConfig) {
   });
  
   return excerpt;
-}
+};
 // END handle excerpts

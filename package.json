@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@11ty/eleventy-img": "^0.7.4"
+    "@11ty/eleventy-img": "^0.7.4",
+    "eleventy-plugin-local-respimg": "^0.4.0"
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",

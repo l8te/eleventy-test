@@ -6,10 +6,12 @@
 {% block content %}
 
   <h1>{{ title }}</h1>
-
-  {{ content | safe }}
-
+  <article>
+    {{ content | safe }}
+  </article>
+  
   {% include "partials/pagelist.njk" %}
+  {% include "partials/postslist.njk" %}
 
 {% endblock %}
 
@@ -25,6 +27,3 @@
 {%- endfor -%}
 </ul>
 
-<hr>
-<p>test if images work</p>
-{% image "./work/couldYouNot.jpg", "photo of my cat" %}

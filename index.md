@@ -22,12 +22,15 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - tags show under excerpt on blog index
 - all tag index works
 - images with eleventy-img
+- moved postslist to partials
+- switched from eleventy-img to eleventy-plugin-local-respimg (currently breaking)
 
 ## to do
 
 - separate directory/collection for work (paglist by collection?)
 - images from filename in frontmatter
 - 404 page
+- dynamic "back" link from thoughts/works (currently hardcoded)
 
 ## issues
 - need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining

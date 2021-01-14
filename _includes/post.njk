@@ -2,15 +2,24 @@
 {% block content %}
   <p> > post layout working</p>
 
+  <!-- make dynamic -->
   <a href="/thoughts">back to thoughts</a>
+
   <h1>{{ title }}</h1>
 
   {% if date %}<p class="time"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></p>{% endif %}
 
-  <p>shows that we can get the file name from the frontmatter: {{ image }}</p>
-  <!-- {% image "./work/couldYouNot.jpg", "photo of my cat" %} -->
+  <!-- <p>shows that we can get the file name from the frontmatter: {{ image }}</p> -->
 
-  {{ content | safe }}
+{% if image %}<p style="color: red;">{{ image }}</p><img src="img/{{ image }}" alt="{{ title }}" />{% endif %}
+
+  <!-- <img src="{{ image }}" alt="{{ title }}" /> -->
+
+
+  <article>
+    {{ content | safe }}
+  </article>
+
 
   <h3>Tags:</h3>
     <ul>
