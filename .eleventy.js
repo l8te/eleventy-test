@@ -47,6 +47,7 @@ module.exports = function (eleventyConfig) {
             case "all":
             case "nav":
             case "post":
+            case "tagList":
               return false;
           }
 
@@ -63,10 +64,11 @@ module.exports = function (eleventyConfig) {
     return [...tagSet];
   });
 
+  // config respimg
   eleventyConfig.addPlugin(pluginLocalRespimg, {
     folders: {
       source: '.', // Folder images are stored in
-      output: '_site/img', // Folder images should be output to
+      output: '_site', // Folder images should be output to
     },
     images: {
       resize: {

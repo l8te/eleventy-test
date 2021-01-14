@@ -10,6 +10,13 @@ eleventyNavigation:
 
 Chiba augmented reality systema concrete monofilament neon chrome tank-traps wristwatch sentient-space franchise math-nano-ablative. Apophenia crypto-fluidity sign rebar office tank-traps girl soul-delay chrome media RAF disposable. 
 
+## to do
+- permalinks to get url from title, not filename
+- separate directory/collection for work (paglist by collection?)
+- images from filename in frontmatter
+- 404 page
+- dynamic "back" link from thoughts/works (currently hardcoded)
+
 ## done
 - added moment.js dates
 - added excerpt shortcodes
@@ -23,14 +30,7 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - all tag index works
 - images with eleventy-img
 - moved postslist to partials
-- switched from eleventy-img to eleventy-plugin-local-respimg (currently breaking)
-
-## to do
-
-- separate directory/collection for work (paglist by collection?)
-- images from filename in frontmatter
-- 404 page
-- dynamic "back" link from thoughts/works (currently hardcoded)
+- switched from eleventy-img to eleventy-plugin-local-respimg
 
 ## issues
-- need to get a better understanding of "{ % extends ... % }" as opposed to layout chaining
+- need to get a better understanding of `{ % extends ... % }` as opposed to layout chaining

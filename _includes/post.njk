@@ -4,6 +4,8 @@
 
   <!-- make dynamic -->
   <a href="/thoughts">back to thoughts</a>
+  <!-- <a href="../{{ parent | url }}">&larr; Back</a>  -->
+  <!-- {{ parent }} -->
 
   <h1>{{ title }}</h1>
 
@@ -11,10 +13,7 @@
 
   <!-- <p>shows that we can get the file name from the frontmatter: {{ image }}</p> -->
 
-{% if image %}<p style="color: red;">{{ image }}</p><img src="img/{{ image }}" alt="{{ title }}" />{% endif %}
-
-  <!-- <img src="{{ image }}" alt="{{ title }}" /> -->
-
+  {% if image %}<img src="/img/{{ image }}" alt="{{ title }}" style="width: 33%; height: 33%;"/>{% endif %}
 
   <article>
     {{ content | safe }}
