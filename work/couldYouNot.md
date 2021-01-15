@@ -1,7 +1,6 @@
 ---
 title: could you not
 parent: work
-layout: post
 image: couldYouNot.jpg
 date: 2017-02-01
 tags: ['work','text']

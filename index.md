@@ -11,13 +11,15 @@ eleventyNavigation:
 Chiba augmented reality systema concrete monofilament neon chrome tank-traps wristwatch sentient-space franchise math-nano-ablative. Apophenia crypto-fluidity sign rebar office tank-traps girl soul-delay chrome media RAF disposable. 
 
 ## to do
+- tags in json?
 - permalinks to get url from title, not filename
 - separate directory/collection for work (paglist by collection?)
 - images from filename in frontmatter
 - 404 page
-- dynamic "back" link from thoughts/works (currently hardcoded)
 
 ## done
+- permalinks in json
+- dynamic back button from posts/work
 - added moment.js dates
 - added excerpt shortcodes
 - link back to blog index from post
