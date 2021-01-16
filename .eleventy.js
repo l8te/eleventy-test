@@ -2,6 +2,8 @@ const moment = require('moment');
  
 moment.locale('en');
 
+const fs = require("fs");
+
 // image handling
 const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
@@ -81,6 +83,23 @@ module.exports = function (eleventyConfig) {
       sizes: '100vw', // Default image `sizes` attribute
       lazy: true, // Include `loading="lazy"` attribute for images
     },
+  });
+
+  // config 404 page
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, bs) {
+
+        bs.addMiddleware("*", (req, res) => {
+          const content_404 = fs.readFileSync('_site/404.html');
+          // Add 404 http status code in request header.
+          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          res.end();
+        });
+      }
+    }
   });
 
 };

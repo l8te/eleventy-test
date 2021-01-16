@@ -12,10 +12,8 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 
 ## to do
 - tags in json?
-- permalinks to get url from title, not filename
 - separate directory/collection for work (paglist by collection?)
 - images from filename in frontmatter
-- 404 page
 
 ## done
 - permalinks in json
@@ -33,6 +31,8 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - images with eleventy-img
 - moved postslist to partials
 - switched from eleventy-img to eleventy-plugin-local-respimg
+- 404 page
+- permalinks to get url from title, not filename
 
 ## issues
 - need to get a better understanding of `{ % extends ... % }` as opposed to layout chaining
