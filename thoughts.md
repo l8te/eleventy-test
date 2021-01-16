@@ -1,11 +1,11 @@
 ---
-title: thoughts
+title: thoughts doot doot
 layout: base
 eleventyNavigation:
     key: thoughts
     order: 5
 pagination:
-    data: collections.post
+    data: collections.thoughts
     alias: pagelist
     reverse: true
     size: 3

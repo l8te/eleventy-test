@@ -25,7 +25,8 @@
         {% for tag in tags %}
             {% if tag == "all" %}
             {% elif tag == "nav" %}
-            {% elif tag == "post" %}
+            {% elif tag == "thoughts" %}
+            {% elif tag == "work" %}
             {% else %}
             <li>
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -35,10 +36,21 @@
         {% endfor %}
     </ul>
 
-  {% set nextPost = collections.post | getNextCollectionItem(page) %}
+<!-- this could be cleaner -->
+{% if parent == "work" %}
+  {% set nextPost = collections.work | getNextCollectionItem(page) %}
   {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
 
-  {% set previousPost = collections.post | getPreviousCollectionItem(page) %}
+  {% set previousPost = collections.work | getPreviousCollectionItem(page) %}
   {% if previousPost %}<p>Previous article: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></p>{% endif %}
+{% elif parent == "thoughts" %}
+{% set nextPost = collections.thoughts | getNextCollectionItem(page) %}
+  {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
+
+  {% set previousPost = collections.thoughts | getPreviousCollectionItem(page) %}
+  {% if previousPost %}<p>Previous article: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></p>{% endif %}
+{% endif %}
+
+
 
 {% endblock %}

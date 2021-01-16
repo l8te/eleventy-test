@@ -1,6 +1,6 @@
 {% if pagelist %}
 <aside class="pagelist">
-
+  <!-- "post" collection is set in page frontmatter -->
   {%- for post in pagelist -%}
   <section>
 
@@ -9,17 +9,19 @@
     {% if post.data.date %}<p class="time"><time datetime="{{ post.data.date }}">{{ post.data.date }}</time></p>{% endif %}
 
     <!-- <p>{{ post.data.description }}</p> -->
+    {% if post.data.image %}<img src="/img/{{ post.data.image }}" alt="{{ post.data.title }}" style="width: 33%; height: 33%;"/>{% endif %}
 
-    {% excerpt post %}
+    <p>{% excerpt post %}</p>
 
     <a href="{{ post.url | url }}"
-   aria-label="Read more on {{ post.data.title }}">Read more</a>
+    aria-label="Read more on {{ post.data.title }}">Read more</a>
 
    <ul>
     {% for tag in post.data.tags %}
     {% if tag == "all" %}
     {% elif tag == "nav" %}
-    {% elif tag == "post" %}
+    {% elif tag == "thoughts" %}
+    {% elif tag == "work" %}
     {% else %}
     <li>
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}

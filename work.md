@@ -4,6 +4,11 @@ layout: base
 eleventyNavigation:
   key: work
   order: 2
+pagination:
+    data: collections.work
+    alias: pagelist
+    reverse: true
+    size: 3
 ---
 
 ## work
