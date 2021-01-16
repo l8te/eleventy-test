@@ -8,6 +8,9 @@ const fs = require("fs");
 const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.setDataDeepMerge(true);
+
   // Copy `img/` to `_site/img`
   eleventyConfig.addPassthroughCopy("img");
   
@@ -48,7 +51,8 @@ module.exports = function (eleventyConfig) {
             // this list should match the `filter` list in tags.njk
             case "all":
             case "nav":
-            case "post":
+            case "thoughts":
+            case "work":
             case "tagList":
               return false;
           }

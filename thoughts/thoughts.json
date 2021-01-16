@@ -1,4 +1,5 @@
 {
   "layout": "post.njk",
-  "permalink": "/{{ parent }}/{{ title | slug }}/"
+  "permalink": "/{{ parent }}/{{ title | slug }}/",
+  "tags": "thoughts"
 }
