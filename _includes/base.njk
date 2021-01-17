@@ -11,7 +11,9 @@
   </article>
 
   {% if eleventyNavigation.key == "thoughts" %}
-    {% include "partials/pagelist.njk" %}
+    {% include "partials/thoughtlist.njk" %}
+  {% elif eleventyNavigation.key == "work" %}
+    {% include "partials/worklist.njk" %}
   {% endif %}
 
 {% include "partials/postslist.njk" %}

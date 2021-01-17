@@ -1,0 +1,23 @@
+list of work
+<ul>
+    {%- for post in collections.work -%}
+    <li>{{ post.data.title }}</li>
+    {% if post.data.image %}<img src="/img/{{ post.data.image }}" alt="{{ post.data.title }}" style="width: 33%; height: 33%;" />{% endif %}
+    {%- endfor -%}
+
+    <!-- not working -->
+    <ul>
+        {% for tag in post.data.tags %}
+        {% if tag == "all" %}
+        {% elif tag == "nav" %}
+        {% elif tag == "thoughts" %}
+        {% elif tag == "work" %}
+        {% else %}
+        <li>
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}">{{ tag }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</ul>

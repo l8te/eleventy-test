@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 2
 pagination:
     data: collections.work
-    alias: pagelist
+    alias: worklist
     reverse: true
     size: 3
 ---

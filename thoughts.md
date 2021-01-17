@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 3
 pagination:
     data: collections.thoughts
-    alias: pagelist
+    alias: thoughtlist
     reverse: true
     size: 3
 ---
