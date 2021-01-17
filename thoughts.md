@@ -1,5 +1,5 @@
 ---
-title: thoughts doot doot
+title: thoughts
 layout: base
 eleventyNavigation:
     key: thoughts

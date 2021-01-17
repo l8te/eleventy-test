@@ -9,9 +9,12 @@
   <article>
     {{ content | safe }}
   </article>
-  
-  {% include "partials/pagelist.njk" %}
-  {% include "partials/postslist.njk" %}
+
+  {% if eleventyNavigation.key == "thoughts" %}
+    {% include "partials/pagelist.njk" %}
+  {% endif %}
+
+{% include "partials/postslist.njk" %}
 
 {% endblock %}
 
