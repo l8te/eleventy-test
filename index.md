@@ -13,8 +13,11 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 ## to do
 - make pagination fix nicer
 - add actual content
+- change pagelist for work
+- rename postslist to something more intuitive
 
 ## done
+- added "if" statement for thoughts pagelist
 - tags in json (needed deep data merge)
 - permalinks in json
 - dynamic back button from posts/work

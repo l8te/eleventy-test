@@ -13,7 +13,7 @@
 
   <!-- <p>shows that we can get the file name from the frontmatter: {{ image }}</p> -->
 
-  {% if image %}<img src="/img/{{ image }}" alt="{{ title }}" style="width: 33%; height: 33%;"/>{% endif %}
+  {% if image %}<img src="/img/{{ image }}" alt="{{ title }}" style="width: 12%; height: 12%;"/>{% endif %}
 
   <article>
     {{ content | safe }}
@@ -37,6 +37,7 @@
     </ul>
 
 <!-- this could be cleaner -->
+<!-- remove prev/next for work? -->
 {% if parent == "work" %}
   {% set nextPost = collections.work | getNextCollectionItem(page) %}
   {% if nextPost %}<p>Next article: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></p>{% endif %}
