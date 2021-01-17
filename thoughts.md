@@ -3,7 +3,7 @@ title: thoughts
 layout: base
 eleventyNavigation:
     key: thoughts
-    order: 5
+    order: 3
 pagination:
     data: collections.thoughts
     alias: pagelist

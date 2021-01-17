@@ -13,6 +13,8 @@ module.exports = function (eleventyConfig) {
 
   // Copy `img/` to `_site/img`
   eleventyConfig.addPassthroughCopy("img");
+
+  // add passthrough for css
   
   // navigation
   eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));

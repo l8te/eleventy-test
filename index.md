@@ -15,6 +15,7 @@ Chiba augmented reality systema concrete monofilament neon chrome tank-traps wri
 - add actual content
 - change pagelist for work
 - rename postslist to something more intuitive
+- add site metatdata json
 
 ## done
 - added "if" statement for thoughts pagelist
